@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Portfolio | Azure & Cybersecurity Specialist</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --azure-blue: #0078d4;
+            --security-green: #10b981;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Header & Profile Summary */
+        header {
+            margin-bottom: 3rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .bio {
+            font-size: 1.1rem;
+            max-width: 800px;
+            color: var(--text-muted);
+        }
+
+        /* Section Headings */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Project Grid & Cards */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            width: fit-content;
+        }
+
+        .badge-azure {
+            background-color: #e0f2fe;
+            color: var(--azure-blue);
+        }
+
+        .badge-security {
+            background-color: #d1fae5;
+            color: var(--security-green);
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .tag {
+            background-color: #f1f5f9;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        /* Contact & Links */
+        .links-container {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--text-main);
+            color: white;
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 2rem; }
+            .project-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER / HERO -->
+    <header>
+        <h1>Cloud Infrastructure & Security Portfolio</h1>
+        <div class="subtitle">Azure Solutions Architecture • Database Administration • Cybersecurity</div>
+        <p class="bio">
+            Enterprise IT professional specializing in secure cloud migrations, robust Azure administration, automated infrastructure deployment, and high-availability database ecosystems. Explore my technical projects, architectural implementations, and validation scripts below.
+        </p>
+    </header>
+
+    <!-- PROJECTS SECTION -->
+    <main>
+        <section>
+            <h2>Featured Hands-On Projects</h2>
+            <div class="project-grid">
+
+                <!-- Project 1: Azure DBA -->
+                <div class="project-card">
+                    <div>
+                        <span class="badge badge-azure">Azure DBA</span>
+                        <h3 class="project-title">High-Availability Azure SQL Database Migration</h3>
+                        <p class="project-desc">
+                            Designed and executed a zero-downtime migration strategy from on-premises SQL Server to Azure SQL Managed Instance. Configured geo-replication, failover groups, and automated performance tuning loops to ensure 99.99% availability.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="tech-tags">
+                            <span class="tag">Azure SQL MI</span>
+                            <span class="tag">T-SQL</span>
+                            <span class="tag">DMA Tool</span>
+                            <span class="tag">Geo-Replication</span>
+                        </div>
+                        <div class="links-container">
+                            <a href="#" class="btn btn-primary">View Project Writeup</a>
+                            <a href="#" class="btn btn-secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Azure 104 -->
+                <div class="project-card">
+                    <div>
+                        <span class="badge badge-azure">Azure 104</span>
+                        <h3 class="project-title">Automated Hub-and-Spoke VNet Architecture</h3>
+                        <p class="project-desc">
+                            Deployed a secure, scalable hub-and-spoke network infrastructure using Infrastructure as Code. Integrated Azure Firewall in the hub to monitor and control all outbound and cross-spoke traffic patterns automatically.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="tech-tags">
+                            <span class="tag">ARM Templates/Bicep</span>
+                            <span class="tag">Azure VNet</span>
+                            <span class="tag">Azure Firewall</span>
+                            <span class="tag">CLI</span>
+                        </div>
+                        <div class="links-container">
+                            <a href="#" class="btn btn-primary">View Technical Architecture</a>
+                            <a href="#" class="btn btn-secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Cybersecurity -->
+                <div class="project-card">
+                    <div>
+                        <span class="badge badge-security">Cybersecurity</span>
+                        <h3 class="project-title">Cloud SIEM Deployment & Incident Response Automation</h3>
+                        <p class="project-desc">
+                            Configured Azure Sentinel to ingest logs across multi-tenant environments. Developed custom Kusto Query Language (KQL) rules to detect unauthorized access attempts and built automated Logic App playbooks for rapid threat isolation.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="tech-tags">
+                            <span class="tag">Microsoft Sentinel</span>
+                            <span class="tag">KQL</span>
+                            <span class="tag">Logic Apps</span>
+                            <span class="tag">Log Analytics</span>
+                        </div>
+                        <div class="links-container">
+                            <a href="#" class="btn btn-primary">View Defense Strategy</a>
+                            <a href="#" class="btn btn-secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Hybrid/Identity (Optional extra card slot) -->
+                <div class="project-card">
+                    <div>
+                        <span class="badge badge-security">Identity & Access Control</span>
+                        <h3 class="project-title">Enterprise Zero-Trust Identity Architecture</h3>
+                        <p class="project-desc">
+                            Implemented a comprehensive identity protection framework utilizing Microsoft Entra ID. Designed strict Conditional Access policies, configured Just-In-Time (JIT) access for VM administration, and enforced hardware-based phishing-resistant MFA.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="tech-tags">
+                            <span class="tag">Entra ID (Azure AD)</span>
+                            <span class="tag">Conditional Access</span>
+                            <span class="tag">PIM</span>
+                            <span class="tag">RBAC</span>
+                        </div>
+                        <div class="links-container">
+                            <a href="#" class="btn btn-primary">View Project Writeup</a>
+                            <a href="#" class="btn btn-secondary">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER / CONTACT LINK -->
+    <footer>
+        <p>Connect Professional Networks: <a href="#" style="color: var(--text-main); font-weight: 500;">LinkedIn</a> • <a href="#" style="color: var(--text-main); font-weight: 500;">GitHub</a></p>
+        <p style="margin-top: 0.5rem;">&copy; 2026 Professional Technical Portfolio. Built for optimal performance and transparency.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
